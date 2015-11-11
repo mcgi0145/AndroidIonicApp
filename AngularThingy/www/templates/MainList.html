@@ -1,0 +1,29 @@
+</br>
+</br>
+<ion-list can-swipe="listCanSwipe">
+    <div class="bar bar-header bar-stable">
+        <h1 class="title">{{listTitle}}</h1>
+    </div>
+    </br>
+    </br>
+    <ion-item ng-repeat="name in names">
+        <h2 ng-class="{lightgreen: name.checked}">{{name.item}}</h2>
+        <ion-option-button class="button-assertive" ng-click="removeName(name)">
+            Delete
+        </ion-option-button>
+        <ion-option-button class="button-calm" ng-click="Complete(name)" ng-model="Completed">
+            Complete
+        </ion-option-button>
+    </ion-item>
+    <form class="" ng-submit="addCat(todoText)">
+        <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+        <input type="text" placeholder="New Item" ng-model="todoText">
+        </label>
+        <button class="button button-balanced">
+        Add
+        </button>
+        </div>
+    </form>
+
+</ion-list>
